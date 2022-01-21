@@ -1,5 +1,5 @@
 fn main() {
-  let v = vec![1, 2, 3, 4];
+  let mut v = vec![1, 2, 3, 4];
   println!(
     "{}",
     match v.get(5) {
@@ -8,4 +8,8 @@ fn main() {
     }
   );
   println!("{}", v[3]);
+  for i in &mut v {
+    *i = *i + 50;
+  }
+  println!("{:?}", v);
 }
